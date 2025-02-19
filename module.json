@@ -1,0 +1,18 @@
+{
+  "id": "attribute-macro-triggers",
+  "title": "Attribute Macro Triggers",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "description": "This module adds the ability to trigger macros based on changes to Actor's attributes.",
+  "authors": [
+    {
+      "name": "GeneralDisorder",
+      "url": "https://github.com/GeneralDisorder",
+      "flags": {}
+    }
+  ],
+  "url": "placeholder"
+}
