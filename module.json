@@ -14,5 +14,8 @@
       "flags": {}
     }
   ],
-  "url": "https://github.com/GeneralDisorder/attribute-macro-triggers"
+  "url": "https://github.com/GeneralDisorder/attribute-macro-triggers",
+  "scripts": [
+    "scripts/triggers.js"
+  ]
 }
