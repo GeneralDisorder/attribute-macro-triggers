@@ -1,0 +1,57 @@
+<div class="attribute-macro-triggers flexcol amt-settings-form" style="height: 100%; overflow: hidden;">
+    <form class="flexcol" style="height: 100%; overflow: hidden;">
+        <div class="dialog-content sheet" style="height: 100%; overflow: hidden;">
+            <ol class="items-list" style="height: 100%; overflow: hidden;">
+                <li class="items-header flexrow" style="position: relative;">
+                    <div class="item-id" style="text-align: left;">ID</div>
+                    <div class="item-name" style="text-align: left;">Path</div>
+                    <div class="item-name" style="text-align: left;">Increasing Macro</div>
+                    <div class="item-name" style="text-align: left;">Decreasing Macro</div>
+                    <div class="item-controls flexrow" style="text-align: center;">
+                        <a class="item-control item-add"><i class="fas fa-plus"></i> Add</a>
+                    </div>
+                </li>
+
+                <ol class="item-list" style="padding-left: 0px; overflow-y: auto; height: calc(100% - 35px);">
+                    {{#each this}}
+                    <li class="item flexrow" data-id="{{this.id}}" style="position:relative;">
+                        <div class="item-controls label" style="text-align: center;">
+                            <label>{{this.id}}</label>
+                        </div>
+                        
+                        <div class="item-name path-name" style="overflow:visible">
+                            <input type="text" class="path-text typeahead" autocomplete="off" value="{{this.path}}" />
+                        </div>
+                        
+                        <div class="item-name macro-inc-name" style="overflow:visible">
+                            <input type="text" class="path-text macro-inc" autocomplete="off" value="{{this.macro_inc}}" />
+                        </div>
+                        
+                        <div class="item-name macro-dec-name" style="overflow:visible">
+                            <input type="text" class="path-text macro-dec" autocomplete="off" value="{{this.macro_dec}}" />
+                        </div>
+
+                        <div class="item-controls flexrow">
+                            <a class="item-control remove"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {{else}}
+                    <li class="item flexrow" data-id="123" style="position:relative;">
+                        <div class="item-controls icon" style="text-align: center;">
+                            <i class="fas fa-xmark"></i>
+                        </div>
+                    </li> 
+                    {{/each}}
+                </ol>
+            </ol>
+        </div>
+        <footer class="sheet-footer flexrow" style="flex-grow: 0;">
+            <button type="button" name="submit">
+                <i class="far fa-save"></i> Save Changes
+            </button>
+            <button type="button" name="reset">
+                <i class="fas fa-undo"></i> Reset Defaults
+            </button>
+        </footer>
+    </form>
+</div>
